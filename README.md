@@ -1,23 +1,26 @@
 # Resume-Matcher
 
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://python.org)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![NLP](https://img.shields.io/badge/NLP-SpaCy%2BTransformers-orange)](https://spacy.io)
+
 A **Python-based Resume Matcher** that evaluates how well a candidate's resume fits a job description using **NLP, TF-IDF, Semantic Similarity, and Skill Extraction**.  
 Supports **PDF and TXT resumes**, dynamic skill matching, and an **interactive CLI**.
 
 ---
 
-## Features
+## 🚀 Features
 
-- Compute **TF-IDF similarity** between resume and job description.
-- Compute **Semantic similarity** using **Sentence Transformers**.
-- Extract technical skills dynamically from resumes and job descriptions.
-- Handles complex skills like **CI/CD, REST API, Node.js, C++**, etc.
-- Interactive CLI to select resumes and job descriptions.
-- Supports **PDF and TXT formats**.
+- **🤖 AI-Powered Matching** - Combines TF-IDF and semantic similarity for accurate results
+- **🔧 Skill Extraction** - Automatically detects technical skills from resumes and job descriptions
+- **📄 Multi-Format Support** - Handles PDF and text resume formats
+- **⚡ Complex Skill Recognition** - Identifies skills like CI/CD, REST API, Node.js, C++
+- **💬 Interactive CLI** - Easy-to-use command line interface
+- **📊 Detailed Analytics** - Skill overlap, missing skills, and multiple scoring metrics
 
 ---
 
-## Project Structure
-
+## 📁 Project Structure
 resume-matcher/
 │
 ├── data/
@@ -31,76 +34,128 @@ resume-matcher/
 │
 ├── src/
 │ ├── init.py
-│ ├── cli.py
-│ ├── matcher.py
-│ ├── nlp_utils.py
-│ ├── parser.py
-│ └── pdf_utils.py
+│ ├── cli.py # Command-line interface
+│ ├── matcher.py # Core matching algorithms
+│ ├── nlp_utils.py # NLP processing utilities
+│ ├── parser.py # Resume/JD parsing
+│ └── pdf_utils.py # PDF processing
 │
+├── main.py # Main application entry point
+├── requirements.txt # Dependencies
 ├── LICENSE
-├── README.md
-├── main.py
-└── requirements.txt
+└── README.md
+
+text
 
 ---
 
-## Installation
+## 🛠 Installation
 
-1. Clone the repository:
+### Prerequisites
+- Python 3.8 or higher
+- pip package manager
 
-git clone https://github.com/shabbirbasha-dev/resume-matcher.git
-cd resume-matcher
+### Step-by-Step Setup
 
-Create a virtual environment (recommended):
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/shabbirbasha-dev/resume-matcher.git
+   cd resume-matcher
+Create virtual environment (recommended)
+
+bash
 python -m venv venv
 source venv/bin/activate   # Linux/Mac
 venv\Scripts\activate      # Windows
+Install dependencies
 
-Install dependencies:
+bash
 pip install -r requirements.txt
+Download NLP model
 
-Download spaCy English model:
+bash
 python -m spacy download en_core_web_sm
-
-Usage
-Run the main script:
+📖 Usage
+Interactive Mode
+bash
 python main.py
-You will be prompted to select a resume and a job description from the data/ folder.
+You'll be prompted to select a resume and job description from the data/ folder.
 
-Alternatively, you can pass file paths directly:
+Direct File Mode
+bash
 python main.py --resume data/resumes/resume1.txt --job data/job_descriptions/jd1.txt
+Python API
+python
+from src.matcher import ResumeMatcher
 
-Example Output
+matcher = ResumeMatcher()
+results = matcher.match("resume.pdf", "job_description.txt")
+print(f"Overall Match: {results['score']}%")
+📊 Example Output
+text
 === Resume Match Result ===
-Resume: data/resumes/resume1.txt
-Job Description: data/job_descriptions/jd1.txt
-TF-IDF Match Score: 28.42%
-Semantic Match Score: 64.81%
-Skill Match Score: 50.00%
-Skills Matched: ['excel', 'python', 'power bi']
-Skills Missing: ['docker', 'aws', 'git']
+📄 Resume: data/resumes/resume1.txt
+📋 Job Description: data/job_descriptions/jd1.txt
+
+🎯 Match Scores:
+   • TF-IDF Similarity: 28.42%
+   • Semantic Similarity: 64.81%
+   • Skill Match: 50.00%
+
+✅ Skills Matched: ['python', 'excel', 'power bi']
+❌ Skills Missing: ['docker', 'aws', 'git']
 ===========================
+➕ Adding Content
+Adding Resumes
+Place resume files in data/resumes/
 
-Adding New Resumes or Job Descriptions
-Place new resume files in data/resumes/ (PDF or TXT).
+Supported formats: PDF, TXT
 
-Place new job descriptions in data/job_descriptions/ (TXT).
+File naming: resume_{name}.pdf or resume_{name}.txt
 
-Run the matcher as usual to test new combinations.
+Adding Job Descriptions
+Place JD files in data/job_descriptions/
 
-Future Enhancements
-Batch processing for multiple resumes at once.
+Format: TXT files
 
-Build a Streamlit or web interface for drag-and-drop resume upload.
+File naming: jd_{company}.txt
 
-Weighted scoring combining TF-IDF, semantic, and skill matches.
+🚧 Future Enhancements
+Batch Processing - Analyze multiple resumes at once
 
-Improved skill extraction using NER for certifications, tools, and frameworks.
+Web Interface - Streamlit or Flask-based UI
 
-Requirements
-Python 3.10+
+Weighted Scoring - Customizable scoring weights
 
-Dependencies: See requirements.txt
+Enhanced Skill DB - Expanded technical skills library
 
-License
-This project is licensed under the MIT License.
+Export Reports - PDF/Excel result reports
+
+API Endpoints - REST API for integration
+
+🛠 Requirements
+Python 3.8+
+
+Dependencies listed in requirements.txt
+
+🤝 Contributing
+We welcome contributions! Please feel free to submit pull requests or open issues for bugs and feature requests.
+
+Fork the repository
+
+Create a feature branch (git checkout -b feature/amazing-feature)
+
+Commit your changes (git commit -m 'Add amazing feature')
+
+Push to the branch (git push origin feature/amazing-feature)
+
+Open a Pull Request
+
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+👨‍💻 Author
+Shabbir Basha
+
+GitHub: @shabbirbasha-dev
+
