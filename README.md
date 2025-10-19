@@ -45,8 +45,6 @@ resume-matcher/
 ├── LICENSE
 └── README.md
 
-text
-
 ---
 
 ## 🛠 Installation
@@ -60,37 +58,38 @@ text
 1. **Clone the repository**
    
    
-Create virtual environment (recommended)
-   ```bash
-      python -m venv venv
-      source venv/bin/activate   # Linux/Mac
-      venv\Scripts\activate      # Windows
+#### Create virtual environment (recommended)
+```bash
+python -m venv venv
+source venv/bin/activate   # Linux/Mac
+venv\Scripts\activate      # Windows
 ```
 
-Install dependencies
+#### Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-Download NLP model
+#### Download NLP model
 ```bash
 python -c "import nltk; nltk.download('stopwords')"
 python -m spacy download en_core_web_sm
 ```
 
-📖 Usage
-Interactive Mode
+## 📖 Usage
+
+### Interactive Mode
 ```bash
 python main.py
 ```
 You'll be prompted to select a resume and job description from the data/ folder.
 
-Direct File Mode
+### Direct File Mode
 ```bash
 python main.py --resume data/resumes/resume1.txt --job data/job_descriptions/jd1.txt
 ```
 
-Python API
+### Python API
 ```python
 from src.matcher import ResumeMatcher
 
@@ -99,7 +98,7 @@ results = matcher.match("resume.pdf", "job_description.txt")
 print(f"Overall Match: {results['score']}%")
 ```
 
-📊 Example Output
+## 📊 Example Output
 ```text
 === Resume Match Result ===
 📄 Resume: data/resumes/resume1.txt
@@ -115,22 +114,24 @@ print(f"Overall Match: {results['score']}%")
 ===========================
 ```
 
-➕ Adding Content
-Adding Resumes
+## ➕ Adding Content
+
+### Adding Resumes
 Place resume files in data/resumes/
 
 Supported formats: PDF, TXT
 
 File naming: resume_{name}.pdf or resume_{name}.txt
 
-Adding Job Descriptions
+### Adding Job Descriptions
 Place JD files in data/job_descriptions/
 
 Format: TXT files
 
 File naming: jd_{company}.txt
 
-🚧 Future Enhancements
+## 🚧 Future Enhancements
+
 Batch Processing - Analyze multiple resumes at once
 
 Web Interface - Streamlit or Flask-based UI
@@ -143,12 +144,12 @@ Export Reports - PDF/Excel result reports
 
 API Endpoints - REST API for integration
 
-🛠 Requirements
+## 🛠 Requirements
 Python 3.8+
 
 Dependencies listed in requirements.txt
 
-🤝 Contributing
+## 🤝 Contributing
 We welcome contributions! Please feel free to submit pull requests or open issues for bugs and feature requests.
 
 Fork the repository
@@ -161,13 +162,10 @@ Push to the branch (git push origin feature/amazing-feature)
 
 Open a Pull Request
 
-📄 License
+## 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-👨‍💻 Author
+## 👨‍💻 Author
 Shabbir Basha
 
 GitHub: @shabbirbasha-dev
-
-
-generate this into a single fully copy paste block and rectify any errors in above readme file
