@@ -21,6 +21,7 @@ Supports **PDF and TXT resumes**, dynamic skill matching, and an **interactive C
 ---
 
 ## 📁 Project Structure
+```text
 resume-matcher/
 │
 ├── data/
@@ -44,7 +45,7 @@ resume-matcher/
 ├── requirements.txt # Dependencies
 ├── LICENSE
 └── README.md
-
+```
 ---
 
 ## 🛠 Installation
