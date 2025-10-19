@@ -1,0 +1,2 @@
+We are looking for a Software Developer proficient in JavaScript, React, Node.js, HTML, CSS, Docker, AWS, Git, CI/CD, Jest, Mocha, and REST APIs.
+

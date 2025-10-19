@@ -1,0 +1,13 @@
+We are looking for a Data Analyst with experience in:
+
+- Python, SQL, Excel, Power BI, Tableau
+- Data cleaning, analysis, and visualization
+- Machine Learning basics
+- Experience with Git, AWS, Docker is a plus
+
+Responsibilities:
+
+- Collect, clean, and analyze business datasets
+- Create dashboards and visual reports
+- Support decision-making with actionable insights
+- Work closely with cross-functional teams

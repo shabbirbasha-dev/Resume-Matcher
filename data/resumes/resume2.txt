@@ -1,0 +1,21 @@
+Name: John Smith
+Education: B.Tech in Computer Science
+
+Skills:
+- JavaScript, React, Node.js, HTML, CSS
+- Git, Docker, AWS, CI/CD
+- Jest, Mocha, REST API
+
+Projects:
+1. Full-Stack E-Commerce Web App
+   - Developed frontend using React and backend with Node.js
+   - Integrated payment gateway and REST APIs
+   - Deployed app on AWS with Docker containers
+
+2. CI/CD Pipeline Automation
+   - Implemented continuous integration using GitHub Actions
+   - Automated build, test, and deployment for multiple projects
+
+3. Chat Application
+   - Built real-time chat using WebSockets and Node.js
+   - Used Jest for unit testing and Mocha for integration tests

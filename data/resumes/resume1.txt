@@ -1,0 +1,13 @@
+Name: David Lee
+Education: B.Sc in Statistics
+
+Skills:
+- Python, Pandas, NumPy
+- Machine Learning basics
+- Data Analysis
+
+Projects:
+1. Predictive Analytics
+   - Built ML models to predict sales trends
+2. Data Cleaning Scripts
+   - Automated data cleaning tasks using Python

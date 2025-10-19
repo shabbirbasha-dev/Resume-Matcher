@@ -1,0 +1,13 @@
+Job Title: Data Scientist
+
+Responsibilities:
+- Develop predictive models using Python and TensorFlow
+- Perform data cleaning, visualization, and analysis using Pandas and NumPy
+- Work with SQL databases and Tableau dashboards
+- Collaborate with cross-functional teams to implement ML solutions
+
+Requirements:
+- Strong Python skills and ML experience
+- Familiarity with SQL, Pandas, NumPy, and TensorFlow
+- Experience with Tableau and data visualization
+- Good analytical and problem-solving skills
