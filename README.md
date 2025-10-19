@@ -1,69 +1,65 @@
-# Resume-Matcher
+Resume Matcher 🔍
+https://img.shields.io/badge/Python-3.8%252B-blue
+https://img.shields.io/badge/License-MIT-green
+https://img.shields.io/badge/NLP-SpaCy%252BTransformers-orange
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://python.org)
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
-[![NLP](https://img.shields.io/badge/NLP-SpaCy%2BTransformers-orange)](https://spacy.io)
+A Python-based Resume Matcher that evaluates how well a candidate's resume fits a job description using NLP, TF-IDF, Semantic Similarity, and Skill Extraction.
+Supports PDF and TXT resumes, dynamic skill matching, and an interactive CLI.
 
-A **Python-based Resume Matcher** that evaluates how well a candidate's resume fits a job description using **NLP, TF-IDF, Semantic Similarity, and Skill Extraction**.  
-Supports **PDF and TXT resumes**, dynamic skill matching, and an **interactive CLI**.
+🚀 Features
+🤖 AI-Powered Matching - Combines TF-IDF and semantic similarity for accurate results
 
----
+🔧 Skill Extraction - Automatically detects technical skills from resumes and job descriptions
 
-## 🚀 Features
+📄 Multi-Format Support - Handles PDF and text resume formats
 
-- **🤖 AI-Powered Matching** - Combines TF-IDF and semantic similarity for accurate results
-- **🔧 Skill Extraction** - Automatically detects technical skills from resumes and job descriptions
-- **📄 Multi-Format Support** - Handles PDF and text resume formats
-- **⚡ Complex Skill Recognition** - Identifies skills like CI/CD, REST API, Node.js, C++
-- **💬 Interactive CLI** - Easy-to-use command line interface
-- **📊 Detailed Analytics** - Skill overlap, missing skills, and multiple scoring metrics
+⚡ Complex Skill Recognition - Identifies skills like CI/CD, REST API, Node.js, C++
 
----
+💬 Interactive CLI - Easy-to-use command line interface
 
-## 📁 Project Structure
+📊 Detailed Analytics - Skill overlap, missing skills, and multiple scoring metrics
+
+📁 Project Structure
+text
 resume-matcher/
 │
 ├── data/
-│ ├── job_descriptions/
-│ │ ├── jd1.txt
-│ │ ├── jd2.txt
-│ │ └── jd3.txt
-│ └── resumes/
-│ ├── resume1.txt
-│ └── resume2.txt
+│   ├── job_descriptions/
+│   │   ├── jd1.txt
+│   │   ├── jd2.txt
+│   │   └── jd3.txt
+│   └── resumes/
+│       ├── resume1.txt
+│       └── resume2.txt
 │
 ├── src/
-│ ├── init.py
-│ ├── cli.py # Command-line interface
-│ ├── matcher.py # Core matching algorithms
-│ ├── nlp_utils.py # NLP processing utilities
-│ ├── parser.py # Resume/JD parsing
-│ └── pdf_utils.py # PDF processing
+│   ├── __init__.py
+│   ├── cli.py          # Command-line interface
+│   ├── matcher.py      # Core matching algorithms
+│   ├── nlp_utils.py    # NLP processing utilities
+│   ├── parser.py       # Resume/JD parsing
+│   └── pdf_utils.py    # PDF processing
 │
-├── main.py # Main application entry point
-├── requirements.txt # Dependencies
+├── main.py             # Main application entry point
+├── requirements.txt    # Dependencies
 ├── LICENSE
 └── README.md
 
-text
+🛠 Installation
+Prerequisites
+Python 3.8 or higher
 
----
+pip package manager
 
-## 🛠 Installation
+Step-by-Step Setup
+Clone the repository
 
-### Prerequisites
-- Python 3.8 or higher
-- pip package manager
-
-### Step-by-Step Setup
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/shabbirbasha-dev/resume-matcher.git
-   cd resume-matcher
+```` ```bash ```` 
+git clone https://github.com/shabbirbasha-dev/resume-matcher.git
+cd resume-matcher  ```` ``` ```` 
 Create virtual environment (recommended)
 
-bash
+```bash
 python -m venv venv
 source venv/bin/activate   # Linux/Mac
 venv\Scripts\activate      # Windows
@@ -74,6 +70,7 @@ pip install -r requirements.txt
 Download NLP model
 
 bash
+python -c "import nltk; nltk.download('stopwords')"
 python -m spacy download en_core_web_sm
 📖 Usage
 Interactive Mode
@@ -159,3 +156,7 @@ Shabbir Basha
 
 GitHub: @shabbirbasha-dev
 
+<div align="center">
+⭐ Don't forget to star this repo if you find it helpful!
+
+</div>
