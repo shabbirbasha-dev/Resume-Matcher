@@ -1,95 +1,106 @@
-Resume Matcher 🔍
-https://img.shields.io/badge/Python-3.8%252B-blue
-https://img.shields.io/badge/License-MIT-green
-https://img.shields.io/badge/NLP-SpaCy%252BTransformers-orange
+# Resume-Matcher
 
-A Python-based Resume Matcher that evaluates how well a candidate's resume fits a job description using NLP, TF-IDF, Semantic Similarity, and Skill Extraction.
-Supports PDF and TXT resumes, dynamic skill matching, and an interactive CLI.
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://python.org)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![NLP](https://img.shields.io/badge/NLP-SpaCy%2BTransformers-orange)](https://spacy.io)
 
-🚀 Features
-🤖 AI-Powered Matching - Combines TF-IDF and semantic similarity for accurate results
+A **Python-based Resume Matcher** that evaluates how well a candidate's resume fits a job description using **NLP, TF-IDF, Semantic Similarity, and Skill Extraction**.  
+Supports **PDF and TXT resumes**, dynamic skill matching, and an **interactive CLI**.
 
-🔧 Skill Extraction - Automatically detects technical skills from resumes and job descriptions
+---
 
-📄 Multi-Format Support - Handles PDF and text resume formats
+## 🚀 Features
 
-⚡ Complex Skill Recognition - Identifies skills like CI/CD, REST API, Node.js, C++
+- **🤖 AI-Powered Matching** - Combines TF-IDF and semantic similarity for accurate results
+- **🔧 Skill Extraction** - Automatically detects technical skills from resumes and job descriptions
+- **📄 Multi-Format Support** - Handles PDF and text resume formats
+- **⚡ Complex Skill Recognition** - Identifies skills like CI/CD, REST API, Node.js, C++
+- **💬 Interactive CLI** - Easy-to-use command line interface
+- **📊 Detailed Analytics** - Skill overlap, missing skills, and multiple scoring metrics
 
-💬 Interactive CLI - Easy-to-use command line interface
+---
 
-📊 Detailed Analytics - Skill overlap, missing skills, and multiple scoring metrics
-
-📁 Project Structure
-text
+## 📁 Project Structure
 resume-matcher/
 │
 ├── data/
-│   ├── job_descriptions/
-│   │   ├── jd1.txt
-│   │   ├── jd2.txt
-│   │   └── jd3.txt
-│   └── resumes/
-│       ├── resume1.txt
-│       └── resume2.txt
+│ ├── job_descriptions/
+│ │ ├── jd1.txt
+│ │ ├── jd2.txt
+│ │ └── jd3.txt
+│ └── resumes/
+│ ├── resume1.txt
+│ └── resume2.txt
 │
 ├── src/
-│   ├── __init__.py
-│   ├── cli.py          # Command-line interface
-│   ├── matcher.py      # Core matching algorithms
-│   ├── nlp_utils.py    # NLP processing utilities
-│   ├── parser.py       # Resume/JD parsing
-│   └── pdf_utils.py    # PDF processing
+│ ├── init.py
+│ ├── cli.py # Command-line interface
+│ ├── matcher.py # Core matching algorithms
+│ ├── nlp_utils.py # NLP processing utilities
+│ ├── parser.py # Resume/JD parsing
+│ └── pdf_utils.py # PDF processing
 │
-├── main.py             # Main application entry point
-├── requirements.txt    # Dependencies
+├── main.py # Main application entry point
+├── requirements.txt # Dependencies
 ├── LICENSE
 └── README.md
 
-🛠 Installation
-Prerequisites
-Python 3.8 or higher
+text
 
-pip package manager
+---
 
-Step-by-Step Setup
-Clone the repository
+## 🛠 Installation
 
-```` ```bash ```` 
-git clone https://github.com/shabbirbasha-dev/resume-matcher.git
-cd resume-matcher  ```` ``` ```` 
+### Prerequisites
+- Python 3.8 or higher
+- pip package manager
+
+### Step-by-Step Setup
+
+1. **Clone the repository**
+   
+   
 Create virtual environment (recommended)
+   ```bash
+      python -m venv venv
+      source venv/bin/activate   # Linux/Mac
+      venv\Scripts\activate      # Windows
+```
 
-```bash
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
 Install dependencies
-
-bash
+```bash
 pip install -r requirements.txt
-Download NLP model
+```
 
-bash
+Download NLP model
+```bash
 python -c "import nltk; nltk.download('stopwords')"
 python -m spacy download en_core_web_sm
+```
+
 📖 Usage
 Interactive Mode
-bash
+```bash
 python main.py
+```
 You'll be prompted to select a resume and job description from the data/ folder.
 
 Direct File Mode
-bash
+```bash
 python main.py --resume data/resumes/resume1.txt --job data/job_descriptions/jd1.txt
+```
+
 Python API
-python
+```python
 from src.matcher import ResumeMatcher
 
 matcher = ResumeMatcher()
 results = matcher.match("resume.pdf", "job_description.txt")
 print(f"Overall Match: {results['score']}%")
+```
+
 📊 Example Output
-text
+```text
 === Resume Match Result ===
 📄 Resume: data/resumes/resume1.txt
 📋 Job Description: data/job_descriptions/jd1.txt
@@ -102,6 +113,8 @@ text
 ✅ Skills Matched: ['python', 'excel', 'power bi']
 ❌ Skills Missing: ['docker', 'aws', 'git']
 ===========================
+```
+
 ➕ Adding Content
 Adding Resumes
 Place resume files in data/resumes/
@@ -156,7 +169,5 @@ Shabbir Basha
 
 GitHub: @shabbirbasha-dev
 
-<div align="center">
-⭐ Don't forget to star this repo if you find it helpful!
 
-</div>
+generate this into a single fully copy paste block and rectify any errors in above readme file
